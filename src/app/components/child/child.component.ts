@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 import { Datos } from './child.interface';
+import { User } from '../../services/user.model';
 
 @Component({
   selector: 'app-child',
@@ -8,7 +9,7 @@ import { Datos } from './child.interface';
 })
 export class ChildComponent implements OnInit {
   // Input (trayendo datos de parent)
-  @Input('arreglo') arreglo: Datos[] = [];
+  @Input('arreglo') arreglo: User[] = [];
 
   // Output (enviando evento con datos a parent)
   @Output() enviar = new EventEmitter();

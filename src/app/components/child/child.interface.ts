@@ -1,4 +1,9 @@
 export interface Datos {
-  nombre: string;
-  pais: string;
+  date: string;
+  email: string;
+  image: null;
+  name: string;
+  publicid: null;
+  role: string;
+  _id: string;
 }

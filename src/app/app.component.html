@@ -17,10 +17,14 @@
   </h1>
   <h1 class="text-2xl font-extrabold">Parent</h1>
   <h2 *ngFor="let valor of datos">
-    <p style="background-color: aquamarine">{{ valor.nombre }}</p>
+    <p style="background-color: aquamarine">{{ valor.name }}</p>
   </h2>
   <h1 class="text-3xl text-red-800">
     ------------------end parent-----------------
   </h1>
 </div>
-<app-child [arreglo]="arreglo" (enviar)="recibiendo($event)"></app-child>
+<app-child
+  *ngIf="arreglo.length > 0"
+  [arreglo]="arreglo"
+  (enviar)="recibiendo($event)"
+></app-child>
